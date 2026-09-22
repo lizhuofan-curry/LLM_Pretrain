@@ -1,0 +1,13 @@
+深度学习是机器学习的一个分支，使用多层神经网络。
+Transformer 架构在自然语言处理领域取得了巨大成功。
+我喜欢深度学习。
+我喜欢机器学习。
+我喜欢自然语言处理。
+我喜欢学习 Transformer。
+我喜欢使用 Python。
+def train(model,data):
+    for batch in data:
+        loss = model(batch)
+        loss.backward()
+import torch
+import torch.nn as nn
