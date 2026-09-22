@@ -4,7 +4,18 @@
 # trainers : 训练器，用于从语料库中学习分词规则
 # pre_tokenizers : 预分词器，在正式 BPE 合并之前对文本做初步切分
 # decoders : 解码器，把 token_id 序列还原回原始字符串
-from tokenizers import Tokenizer,models,trainers,pre_tokenizers,decoders
+from pathlib import Path
+import sys
+
+from tokenizers import Tokenizer, decoders, models, pre_tokenizers, trainers
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+EXAMPLE_DIR = Path(__file__).resolve().parent
+CORPUS_PATH = EXAMPLE_DIR / "corpus.txt"
+TOKENIZER_PATH = EXAMPLE_DIR / "my_tokenizer.json"
 
 # 选择分词模型：BPE (Byte-Pair Encoding, 字节对编码)
 # BPE 的核心思想：
@@ -61,7 +72,7 @@ trainer  = trainers.BpeTrainer(
 # 2.统计所有相邻 token 对的概率
 # 3.合并最高频的一对，加入词表
 # 4.重复直到词表达到 vocab_size
-tokenizer.train(['corpus.txt'],trainer)
+tokenizer.train([str(CORPUS_PATH)], trainer)
 
 # 保存分词器，方便后续直接加载使用
 # 保存为单个 JSON 文件，里面包含：
@@ -71,7 +82,7 @@ tokenizer.train(['corpus.txt'],trainer)
 # - 预分词器/解码器配置
 # - 特殊 token 信息
 # 加载时只需 : tokenizer = Tokenizer.from_file("my_tokenizer.json")
-tokenizer.save("my_tokenizer.json")
+tokenizer.save(str(TOKENIZER_PATH))
 
 # 打印最终词表大小，应约等于 vocab_size (可能小，取决于合并结果)
 print("词表大小：",tokenizer.get_vocab_size())

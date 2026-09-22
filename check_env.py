@@ -1,6 +1,10 @@
 import sys
 import torch
 
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 print("=" * 50)
 print("环境检查")
 print("=" * 50)

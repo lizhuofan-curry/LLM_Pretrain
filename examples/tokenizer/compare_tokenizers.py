@@ -1,8 +1,14 @@
 from pathlib import Path
+import sys
+
 # 底层 tokenizer
 from tokenizers import Tokenizer
 # 更高级的自动加载器,这个和AutoModel 不同，只加载 tokenizer
 from transformers import AutoTokenizer
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 tokenizer_path = Path(__file__).with_name("my_tokenizer.json")
 

@@ -1,5 +1,11 @@
 from pathlib import Path
+import sys
+
 from tokenizers import Tokenizer
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 def evaluate(tokenizer,texts):
     """

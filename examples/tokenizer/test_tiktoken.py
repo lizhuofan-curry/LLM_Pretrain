@@ -1,4 +1,9 @@
 import tiktoken
+import sys
+
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # 加载 GPT-4 使用的编码
 enc = tiktoken.get_encoding('cl100k_base')

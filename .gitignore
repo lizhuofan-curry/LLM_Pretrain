@@ -1,10 +1,49 @@
-# Python-generated files
+# Python cache and build output
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
-# Virtual environments
-.venv
+# Virtual environments and local uv state
+.venv/
+venv/
+.uv-cache/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.code-workspace
+
+# Notebooks and logs
+.ipynb_checkpoints/
+*.log
+logs/
+wandb/
+
+# Local datasets, caches, checkpoints, and model weights
+data/
+datasets/
+cache/
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
