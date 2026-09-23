@@ -1,0 +1,52 @@
+title: "[学习答疑] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提问！请尽量提供完整背景和你已经尝试过的方法，方便大家快速定位问题。
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 问题所属阶段
+      options:
+        - 环境配置与 uv
+        - Tokenizer
+        - 数据工程
+        - Transformer
+        - 单卡与分布式训练
+        - 评测与复现
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想完成什么？
+      description: 描述你的目标、正在阅读的章节或正在运行的示例。
+      placeholder: 例如：我正在运行 examples/tokenizer/byte_bpe.py，希望理解训练出的词表为什么会出现这些 token。
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到了什么问题？
+      description: 请附上关键代码、完整报错或不理解的概念，不要上传密钥和隐私数据。
+      placeholder: 请粘贴能够帮助复现问题的信息。
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempts
+    attributes:
+      label: 你已经尝试过什么？
+      description: 写下你的理解、查过的资料或已经排除的原因。
+
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境（如适用）
+      placeholder: Windows 11 / Python 3.11 / PyTorch 2.x / CUDA 13.0
+

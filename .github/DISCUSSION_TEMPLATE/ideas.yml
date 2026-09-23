@@ -1,0 +1,45 @@
+title: "[想法] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎一起设计更清晰、更可运行的 LLM 预训练学习路线。
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 想法所属方向
+      options:
+        - 学习路线与文档
+        - Tokenizer 实验
+        - 数据处理与质量
+        - 模型实现
+        - 训练系统与性能
+        - 评测与可复现性
+        - 仓库体验
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 你观察到了什么问题或机会？
+      description: 说明当前缺口，以及这个想法为什么值得做。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你的建议
+      description: 尽量描述预期形式、最小实现和可验证的结果。
+      placeholder: 可以包含示例命令、资料链接或实验草案。
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: 可能的代价或替代方案
+      description: 可选。比如额外依赖、GPU 需求、维护成本或更简单的做法。
+

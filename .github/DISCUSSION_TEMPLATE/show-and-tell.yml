@@ -1,0 +1,45 @@
+title: "[实验分享] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        很高兴看到你的实验！请把配置、方法和结果写清楚，让其他人也能理解和复现。
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 实验目标
+      description: 你想验证什么问题？
+    validations:
+      required: true
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: 环境与配置
+      description: 请说明数据、代码版本、Python/PyTorch/CUDA、GPU、随机种子和关键超参数。
+      placeholder: 不要上传密钥、访问令牌或含隐私的数据。
+    validations:
+      required: true
+
+  - type: textarea
+    id: method
+    attributes:
+      label: 方法与复现步骤
+      description: 用尽量短的步骤说明别人如何重现实验。
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: 结果与观察
+      description: 给出指标、日志摘要或截图，并说明你如何理解结果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: limits
+    attributes:
+      label: 局限与下一步
+      description: 哪些结论还不能下？下一步准备验证什么？

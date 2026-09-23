@@ -4,6 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-CUDA_13.0-EE4C2C?logo=pytorch&logoColor=white)
 ![uv](https://img.shields.io/badge/env-uv-6E56CF)
 ![Status](https://img.shields.io/badge/status-learning_in_public-16A34A)
+[![GitHub Discussions](https://img.shields.io/github/discussions/lizhuofan-curry/LLM_Pretrain?logo=github)](https://github.com/lizhuofan-curry/LLM_Pretrain/discussions)
 
 > 从一个 BPE 分词器开始，亲手搭出大模型预训练的完整知识链。
 
@@ -198,14 +199,16 @@ LLM_Pretrain/
 - 当前还没有提交完整 Transformer 预训练、分布式启动和基准结果；
 - README 只记录已经存在或明确规划的内容，不虚构训练指标。
 
-## 🤝 交流
+## 🤝 参与讨论
 
-如果你也在从零学习 LLM 预训练，欢迎通过 Issue：
+如果你也在从零学习 LLM 预训练，欢迎来到 [GitHub Discussions](https://github.com/lizhuofan-curry/LLM_Pretrain/discussions)：
 
-- 指出代码或笔记中的错误；
-- 提议新的可复现实验；
-- 分享不同 Tokenizer 的对比结果；
-- 一起把“会运行”推进到“真正理解”。
+- **Q&A**：询问 uv、Tokenizer、数据工程、Transformer 或训练系统相关问题；
+- **Ideas**：提出新的学习路线、实验设计或仓库改进建议；
+- **Show and tell**：分享你的复现过程、Tokenizer 对比或训练结果；
+- **General**：交流学习心得，一起把“会运行”推进到“真正理解”。
+
+如果你发现了能够稳定复现的代码错误、文档错误，或有边界明确的开发任务，请提交 [Issue](https://github.com/lizhuofan-curry/LLM_Pretrain/issues)。
 
 ---
 
